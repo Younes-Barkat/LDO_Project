@@ -1,0 +1,93 @@
+1- Les noms des neveux de Ahmed
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    ?enfantAhmed fam:enfantDe fam:Ahmed .
+    ?frere fam:enfantDe fam:Ahmed .
+    FILTER(?frere != ?enfantAhmed)
+    ?neveu fam:enfantDe ?frere .
+    ?neveu fam:nom ?nom .
+}
+
+
+2-Les noms des frères
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom1 ?nom2 WHERE {
+    ?x fam:enfantDe ?parent .
+    ?y fam:enfantDe ?parent .
+    ?x a fam:Homme .
+    ?y a fam:Homme .
+    FILTER(?x != ?y)
+    ?x fam:nom ?nom1 .
+    ?y fam:nom ?nom2 .
+}
+
+
+3-Les noms des pères ayant au moins deux enfants
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    ?pere a fam:Homme .
+    ?e1 fam:enfantDe ?pere .
+    ?e2 fam:enfantDe ?pere .
+    FILTER(?e1 != ?e2)
+    ?pere fam:nom ?nom .
+}
+
+
+4-Les noms des mères ayant au moins deux filles
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    ?mere a fam:Femme .
+    ?f1 fam:enfantDe ?mere .
+    ?f2 fam:enfantDe ?mere .
+    ?f1 a fam:Femme .
+    ?f2 a fam:Femme .
+    FILTER(?f1 != ?f2)
+    ?mere fam:nom ?nom .
+}
+
+
+5-Les noms des oncles de Selma
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    ?parentSelma fam:enfantDe ?grandParent .
+    ?oncle fam:enfantDe ?grandParent .
+    ?oncle a fam:Homme .
+    FILTER(?oncle != ?parentSelma)
+    fam:Selma fam:enfantDe ?parentSelma .
+    ?oncle fam:nom ?nom .
+}
+
+
+6- Les noms des cousins et cousines de Samia
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    fam:Samia fam:enfantDe ?parentSamia .
+    ?oncleOuTante fam:enfantDe ?grandParent .
+    ?parentSamia fam:enfantDe ?grandParent .
+    FILTER(?oncleOuTante != ?parentSamia)
+    ?cousin fam:enfantDe ?oncleOuTante .
+    FILTER(?cousin != fam:Samia)
+    ?cousin fam:nom ?nom .
+}
+
+
+7-Les noms des étudiants
+
+PREFIX fam: <http://www.semanticweb.org/ontologies/famille#>
+
+SELECT DISTINCT ?nom WHERE {
+    ?etudiant a fam:Etudiant .
+    ?etudiant fam:nom ?nom .
+}

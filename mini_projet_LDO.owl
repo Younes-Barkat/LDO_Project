@@ -1,0 +1,1123 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/famille"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/famille">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/famille#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Adult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bebe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Celibataire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Enfant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Enseignant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Epoux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EpouxSansEnfant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Etudiant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Femme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrandMere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrandParent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrandPere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Homme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingenieur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medecin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MereDeFilles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oncle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentBonSante"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentChoye"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentHeureux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PereAvecFils"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PereDeFamilleNombreuse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonneAgee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cousinDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#enfantDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estMarieAvec"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#grandParentDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#neveuNieceDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#oncleDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#parentDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tanteDe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ahmed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dounia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Farid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hala"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Halima"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Karim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rokaya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Samia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Samir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Selma"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Widad"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Celibataire"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Personne"/>
+            <ObjectMaxCardinality cardinality="0">
+                <ObjectProperty IRI="#estMarieAvec"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Epoux"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#estMarieAvec"/>
+            <Class IRI="#Personne"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EpouxSansEnfant"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#estMarieAvec"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMaxCardinality cardinality="0">
+                <ObjectProperty IRI="#parentDe"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GrandMere"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Femme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#grandParentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GrandParent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#grandParentDe"/>
+            <Class IRI="#Personne"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GrandPere"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Homme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#grandParentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Mere"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Femme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MereDeFilles"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Femme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Femme"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Oncle"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Homme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#oncleDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <Class IRI="#Personne"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentBonSante"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Medecin"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentChoye"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Parent"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentHeureux"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Medecin"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentType"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Etudiant"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Pere"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Homme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PereAvecFils"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Homme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#parentDe"/>
+                <Class IRI="#Homme"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PereDeFamilleNombreuse"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Homme"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#parentDe"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tante"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Femme"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tanteDe"/>
+                <Class IRI="#Personne"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Adult"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bebe"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Enfant"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Enseignant"/>
+        <Class IRI="#Metier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Etudiant"/>
+        <Class IRI="#Metier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Femme"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Homme"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingenieur"/>
+        <Class IRI="#Metier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medecin"/>
+        <Class IRI="#Metier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metier"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonneAgee"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Femme"/>
+        <Class IRI="#Homme"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Homme"/>
+        <NamedIndividual IRI="#Ahmed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Amel"/>
+                <NamedIndividual IRI="#Karim"/>
+                <NamedIndividual IRI="#Samir"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Ahmed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Amel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medecin"/>
+        <NamedIndividual IRI="#Amel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estMarieAvec"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Amel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Dounia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Salim"/>
+                <NamedIndividual IRI="#Farid"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Dounia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Homme"/>
+        <NamedIndividual IRI="#Farid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medecin"/>
+        <NamedIndividual IRI="#Farid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Farid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Hala"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Samia"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Hala"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Halima"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Halima"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Homme"/>
+        <NamedIndividual IRI="#Karim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Salim"/>
+                <NamedIndividual IRI="#Farid"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Karim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Rokaya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Karim"/>
+                <NamedIndividual IRI="#Samir"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Rokaya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Etudiant"/>
+        <NamedIndividual IRI="#Salim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Homme"/>
+        <NamedIndividual IRI="#Salim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estMarieAvec"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Salim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Samia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medecin"/>
+        <NamedIndividual IRI="#Samia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Selma"/>
+                <NamedIndividual IRI="#Widad"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Samia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Homme"/>
+        <NamedIndividual IRI="#Samir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Samia"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Samir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Etudiant"/>
+        <NamedIndividual IRI="#Selma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Selma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estMarieAvec"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Selma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Etudiant"/>
+        <NamedIndividual IRI="#Widad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Femme"/>
+        <NamedIndividual IRI="#Widad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estMarieAvec"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectAllValuesFrom>
+        <NamedIndividual IRI="#Widad"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Ahmed"/>
+        <NamedIndividual IRI="#Amel"/>
+        <NamedIndividual IRI="#Dounia"/>
+        <NamedIndividual IRI="#Farid"/>
+        <NamedIndividual IRI="#Hala"/>
+        <NamedIndividual IRI="#Halima"/>
+        <NamedIndividual IRI="#Karim"/>
+        <NamedIndividual IRI="#Rokaya"/>
+        <NamedIndividual IRI="#Salim"/>
+        <NamedIndividual IRI="#Samia"/>
+        <NamedIndividual IRI="#Samir"/>
+        <NamedIndividual IRI="#Selma"/>
+        <NamedIndividual IRI="#Widad"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <NamedIndividual IRI="#Ahmed"/>
+        <NamedIndividual IRI="#Rokaya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Amel"/>
+        <NamedIndividual IRI="#Ahmed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <NamedIndividual IRI="#Amel"/>
+        <NamedIndividual IRI="#Samir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <NamedIndividual IRI="#Amel"/>
+        <NamedIndividual IRI="#Karim"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Farid"/>
+        <NamedIndividual IRI="#Karim"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Farid"/>
+        <NamedIndividual IRI="#Dounia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <NamedIndividual IRI="#Farid"/>
+        <NamedIndividual IRI="#Halima"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Karim"/>
+        <NamedIndividual IRI="#Rokaya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Karim"/>
+        <NamedIndividual IRI="#Ahmed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <NamedIndividual IRI="#Karim"/>
+        <NamedIndividual IRI="#Dounia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Salim"/>
+        <NamedIndividual IRI="#Karim"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Salim"/>
+        <NamedIndividual IRI="#Dounia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <NamedIndividual IRI="#Salim"/>
+        <NamedIndividual IRI="#Farid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Samia"/>
+        <NamedIndividual IRI="#Hala"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Samia"/>
+        <NamedIndividual IRI="#Samir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Samir"/>
+        <NamedIndividual IRI="#Ahmed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Samir"/>
+        <NamedIndividual IRI="#Rokaya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <NamedIndividual IRI="#Samir"/>
+        <NamedIndividual IRI="#Hala"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Selma"/>
+        <NamedIndividual IRI="#Samia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enfantDe"/>
+        <NamedIndividual IRI="#Widad"/>
+        <NamedIndividual IRI="#Samia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <NamedIndividual IRI="#Widad"/>
+        <NamedIndividual IRI="#Selma"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Ahmed"/>
+        <Literal datatypeIRI="&xsd;int">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Ahmed"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ahmed</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Amel"/>
+        <Literal datatypeIRI="&xsd;int">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Amel"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Amel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Dounia"/>
+        <Literal datatypeIRI="&xsd;int">48</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Dounia"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dounia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Farid"/>
+        <Literal datatypeIRI="&xsd;int">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Farid"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Farid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Hala"/>
+        <Literal datatypeIRI="&xsd;int">47</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Hala"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hala</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Halima"/>
+        <Literal datatypeIRI="&xsd;int">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Halima"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Halima</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Karim"/>
+        <Literal datatypeIRI="&xsd;int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Karim"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Karim</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Rokaya"/>
+        <Literal datatypeIRI="&xsd;int">72</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Rokaya"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Rokaya</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Salim"/>
+        <Literal datatypeIRI="&xsd;int">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Salim"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Salim</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Samia"/>
+        <Literal datatypeIRI="&xsd;int">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Samia"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Samia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Samir"/>
+        <Literal datatypeIRI="&xsd;int">55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Samir"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Samir</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Selma"/>
+        <Literal datatypeIRI="&xsd;int">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Selma"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Selma</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Widad"/>
+        <Literal datatypeIRI="&xsd;int">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Widad"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Widad</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#enfantDe"/>
+        <ObjectProperty IRI="#enfantDe"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#enfantDe"/>
+        <ObjectProperty IRI="#parentDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#oncleDe"/>
+        <ObjectProperty IRI="#neveuNieceDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#tanteDe"/>
+        <ObjectProperty IRI="#neveuNieceDe"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#cousinDe"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#estMarieAvec"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cousinDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#enfantDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#grandParentDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#neveuNieceDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#parentDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cousinDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#enfantDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estMarieAvec"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#frereSoeurDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#grandParentDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#neveuNieceDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#oncleDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#parentDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tanteDe"/>
+        <Class IRI="#Personne"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#frereSoeurDe"/>
+            <ObjectProperty IRI="#parentDe"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#oncleDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#frereSoeurDe"/>
+            <ObjectProperty IRI="#parentDe"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#tanteDe"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#parentDe"/>
+            <ObjectProperty IRI="#parentDe"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#grandParentDe"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nom"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#age"/>
+                <Variable IRI="urn:swrl#p"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">18</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">60</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Adult"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#age"/>
+                <Variable IRI="urn:swrl#p"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">3</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">18</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Enfant"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#age"/>
+                <Variable IRI="urn:swrl#p"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">3</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Bebe"/>
+                <Variable IRI="urn:swrl#p"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#age"/>
+                <Variable IRI="urn:swrl:var#p"/>
+                <Variable IRI="urn:swrl:var#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl:var#a"/>
+                <Literal datatypeIRI="&xsd;integer">60</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#PersonneAgee"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl:var#p1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Personne"/>
+                <Variable IRI="urn:swrl:var#p2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#enfantDe"/>
+                <Variable IRI="urn:swrl:var#p1"/>
+                <Variable IRI="urn:swrl:var#parent"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#enfantDe"/>
+                <Variable IRI="urn:swrl:var#p2"/>
+                <Variable IRI="urn:swrl:var#parent"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="urn:swrl:var#p1"/>
+                <Variable IRI="urn:swrl:var#p2"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#frereSoeurDe"/>
+                <Variable IRI="urn:swrl:var#p1"/>
+                <Variable IRI="urn:swrl:var#p2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
